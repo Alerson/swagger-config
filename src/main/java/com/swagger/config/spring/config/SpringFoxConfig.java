@@ -22,15 +22,13 @@ public class SpringFoxConfig {
 				.apis(RequestHandlerSelectors.basePackage("com.swagger.config.rest.controller"))
 				.paths(PathSelectors.ant("/api/*"))
 				.build()
-				.useDefaultResponseMessages(false)
 				.apiInfo(apiInfo());
 	}
 
 	private ApiInfo apiInfo() {
 		return new ApiInfoBuilder().title("Simple Spring Boot REST API")
 				.description("Um exemplo de aplicação Spring Boot REST API com SpringFox para documentar")
-				.version("1.0.0")
-				.license("Apache License Version 2.0")
+				.version("1.0.0").license("Apache License Version 2.0")
 				.licenseUrl("https://www.apache.org/licenses/LICENSE-2.0")
 				.contact(new Contact("Alerson Rigo", "https://github.com/Alerson/swagger-config", "alerson.rigo@gmail.com"))
 				.build();
